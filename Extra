@@ -1,0 +1,42 @@
+
+
+
+
+--Intro
+print("Loading....")
+local notification = Instance.new("Sound")
+notification.Parent = game:GetService("SoundService")
+notification.SoundId = "rbxassetid://9086208751"
+notification.Volume = 20
+
+game.StarterGui:SetCore("SendNotification", {
+      Icon = "http://www.roblox.com/asset/?id=15411308092";
+      Title = "Simple Hub", 
+      Text = "Loading Please Wait A Seconds!";
+})
+wait(4)
+
+game.StarterGui:SetCore("SendNotification", {
+    Icon = "http://www.roblox.com/asset/?id=15411308092";
+      Title = "Simple Hub", 
+      Text = "Loading Complete Wait to Load Script!";
+notification:Play()
+})
+
+wait(1.75)
+
+
+loadstring(Game:HttpGetAsync("https://raw.githubusercontent.com/ToTaiVn/auto-chestop/main/toilatrumphiphai.lua"))()
+wait(.3)
+
+game.StarterGui:SetCore("SendNotification", {
+    Icon = "http://www.roblox.com/asset/?id=15411308092";
+      Title = "Simple Hub", 
+      Text = "Welcome"..game.Players.LocalPlayer.Name.."!!";
+})
+
+print("Hi"..game.Players.LocalPlayer.Name.."•_•")
+
+
+    
+
